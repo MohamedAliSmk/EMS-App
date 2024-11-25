@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:email_id",
+ "creation": "2024-11-25 00:20:15.308463",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "email_id",
+  "user_role",
+  "section_break_pqzs",
+  "first_name",
+  "middle_name",
+  "last_name",
+  "column_break_okis",
+  "user_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email Address (Login ID)",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_pqzs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last name "
+  },
+  {
+   "fieldname": "column_break_okis",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "user_name",
+   "fieldtype": "Data",
+   "label": "User Name",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "user_role",
+   "fieldtype": "Link",
+   "label": "Role",
+   "options": "Role Profile",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-25 01:43:50.520635",
+ "modified_by": "Administrator",
+ "module": "Employee Management System",
+ "name": "User Accounts",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

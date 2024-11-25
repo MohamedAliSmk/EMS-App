@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:company_name",
+ "creation": "2024-11-25 00:39:36.769632",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "statistics_section",
+  "number_of_departments",
+  "number_of_projects",
+  "column_break_gjmr",
+  "number_of_employees",
+  "section_break_vuec",
+  "abbr",
+  "column_break_etcx",
+  "company_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Name",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_etcx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "label": "Abbr",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "statistics_section",
+   "fieldtype": "Section Break",
+   "label": "Statistics"
+  },
+  {
+   "fieldname": "number_of_departments",
+   "fieldtype": "Data",
+   "label": "Number of Departments",
+   "read_only": 1
+  },
+  {
+   "fieldname": "number_of_employees",
+   "fieldtype": "Int",
+   "label": "Number of Employees",
+   "read_only": 1
+  },
+  {
+   "fieldname": "number_of_projects",
+   "fieldtype": "Int",
+   "label": "Number of Projects",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_vuec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_gjmr",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-25 07:17:50.789886",
+ "modified_by": "Administrator",
+ "module": "Employee Management System",
+ "name": "EMS Company",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "company_name"
+}

@@ -1,0 +1,484 @@
+{
+	"info": {
+		"_postman_id": "c5745063-7c79-4df0-b296-72c8146786f0",
+		"name": "BrainWise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29675575",
+		"_collection_link": "https://erp-team-3992.postman.co/workspace/ERP-Team-Workspace~704daf70-197d-46da-8c48-c280444fdee3/collection/29675575-c5745063-7c79-4df0-b296-72c8146786f0?action=share&source=collection_link&creator=29675575"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Create Employee",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "token 1639f0bb9596959:0c7ff8ebd428fa7",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/method/ems.api.create_employee?data={\"employee_name\":\"Ahmed Ali\",\"email_address\":\"ahmedali@gmail.com\",\"address\":\"123cairo\",\"designation\":\"software enginner\",\"ems_company\":\"Apple\",\"ems_department\":\"Development - AAP\"}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"ems.api.create_employee"
+							],
+							"query": [
+								{
+									"key": "data",
+									"value": "{\"employee_name\":\"Ahmed Ali\",\"email_address\":\"ahmedali@gmail.com\",\"address\":\"123cairo\",\"designation\":\"software enginner\",\"ems_company\":\"Apple\",\"ems_department\":\"Development - AAP\"}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/method/ems.api.get_employee?employee_name=Ahmed Ali",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"ems.api.get_employee"
+							],
+							"query": [
+								{
+									"key": "employee_name",
+									"value": "Ahmed Ali"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employees",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "token 1639f0bb9596959:0c7ff8ebd428fa7",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/method/ems.api.update_employee?employee_name=Ahmed Ali&data={\"employee_name\":\"Ahmed Ali\",\"email_address\":\"ahmedali222@gmail.com\",\"address\":\"123cairo\",\"designation\":\"software enginner\",\"ems_company\":\"Apple\",\"ems_department\":\"Development - AAP\"}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"ems.api.update_employee"
+							],
+							"query": [
+								{
+									"key": "employee_name",
+									"value": "Ahmed Ali"
+								},
+								{
+									"key": "data",
+									"value": "{\"employee_name\":\"Ahmed Ali\",\"email_address\":\"ahmedali222@gmail.com\",\"address\":\"123cairo\",\"designation\":\"software enginner\",\"ems_company\":\"Apple\",\"ems_department\":\"Development - AAP\"}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "token 1639f0bb9596959:0c7ff8ebd428fa7",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/method/ems.api.delete_employee?employee_name=Ahmed Ali",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"ems.api.delete_employee"
+							],
+							"query": [
+								{
+									"key": "employee_name",
+									"value": "Ahmed Ali"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "Create Project",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "token 1639f0bb9596959:0c7ff8ebd428fa7",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"project_name\":\"ABC Project\",\"description\":\"ABC Project Description\",\"start_date\":\"2024-01-01\",\"end_date\":\"2024-12-31\",\"ems_company\":\"Apple\",\"ems_department\":\"Development - AAP\",\"assigned_employees\":[{\"assigned_employee\":\"Mohamed Ali Hasan\"}]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/method/ems.api.create_project?data={\"project_name\":\"ABC Project\",\"description\":\"ABC Project Description\",\"start_date\":\"2024-01-01\",\"end_date\":\"2024-12-31\",\"ems_company\":\"Apple\",\"ems_department\":\"Development - AAP\",\"assigned_employees\":[{\"assigned_employee\":\"Mohamed Ali Hasan\"}]}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"ems.api.create_project"
+							],
+							"query": [
+								{
+									"key": "data",
+									"value": "{\"project_name\":\"ABC Project\",\"description\":\"ABC Project Description\",\"start_date\":\"2024-01-01\",\"end_date\":\"2024-12-31\",\"ems_company\":\"Apple\",\"ems_department\":\"Development - AAP\",\"assigned_employees\":[{\"assigned_employee\":\"Mohamed Ali Hasan\"}]}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/method/ems.api.get_employee?employee_name=Ahmed Ali",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"ems.api.get_employee"
+							],
+							"query": [
+								{
+									"key": "employee_name",
+									"value": "Ahmed Ali"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Project",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "token 1639f0bb9596959:0c7ff8ebd428fa7",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/method/ems.api.update_employee?employee_name=Ahmed Ali&data={\"employee_name\":\"Ahmed Ali\",\"email_address\":\"ahmedali222@gmail.com\",\"address\":\"123cairo\",\"designation\":\"software enginner\",\"ems_company\":\"Apple\",\"ems_department\":\"Development - AAP\"}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"ems.api.update_employee"
+							],
+							"query": [
+								{
+									"key": "employee_name",
+									"value": "Ahmed Ali"
+								},
+								{
+									"key": "data",
+									"value": "{\"employee_name\":\"Ahmed Ali\",\"email_address\":\"ahmedali222@gmail.com\",\"address\":\"123cairo\",\"designation\":\"software enginner\",\"ems_company\":\"Apple\",\"ems_department\":\"Development - AAP\"}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Project",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "token 1639f0bb9596959:0c7ff8ebd428fa7",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/method/ems.api.delete_employee?employee_name=Ahmed Ali",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"ems.api.delete_employee"
+							],
+							"query": [
+								{
+									"key": "employee_name",
+									"value": "Ahmed Ali"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "Get Company",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/method/ems.api.get_ems_company?company_name=BrainWise",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"ems.api.get_ems_company"
+							],
+							"query": [
+								{
+									"key": "company_name",
+									"value": "BrainWise"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Department",
+			"item": [
+				{
+					"name": "Get Department",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "token 1639f0bb9596959:0c7ff8ebd428fa7",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/method/ems.api.get_ems_department?department_name=Development - BW",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"method",
+								"ems.api.get_ems_department"
+							],
+							"query": [
+								{
+									"key": "department_name",
+									"value": "Development - BW"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "token 1639f0bb9596959:0c7ff8ebd428fa7",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"usr\": \"mhassan@arabdt.com\",\r\n  \"pwd\": \"ArabDT@123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base url}}/api/method/login",
+					"host": [
+						"{{base url}}"
+					],
+					"path": [
+						"api",
+						"method",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

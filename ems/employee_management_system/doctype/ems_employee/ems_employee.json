@@ -1,0 +1,189 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:employee_name",
+ "creation": "2024-11-25 01:13:12.801370",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_details_section",
+  "employee_name",
+  "email_address",
+  "mobile_number",
+  "column_break_mehn",
+  "user_id",
+  "address",
+  "designation",
+  "company_section",
+  "ems_company",
+  "column_break_nlgw",
+  "ems_department",
+  "amended_from",
+  "interview_info_section",
+  "interview_time",
+  "notes",
+  "hiring_info_section",
+  "number_of_assigned_projects",
+  "days_employed",
+  "hired_on",
+  "column_break_bfmz"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Phone",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "column_break_mehn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_section",
+   "fieldtype": "Section Break",
+   "label": "Company"
+  },
+  {
+   "fieldname": "column_break_nlgw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ems_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "EMS Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ems_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Department",
+   "options": "EMS Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "EMS Employee",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "User ID",
+   "options": "User Accounts",
+   "unique": 1
+  },
+  {
+   "fieldname": "hiring_info_section",
+   "fieldtype": "Section Break",
+   "label": "Hiring Info"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state==\"Hired\"",
+   "fieldname": "hired_on",
+   "fieldtype": "Date",
+   "label": "Hired On",
+   "mandatory_depends_on": "eval:doc.workflow_state==\"Hired\""
+  },
+  {
+   "fieldname": "column_break_bfmz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state==\"Hired\"",
+   "fieldname": "days_employed",
+   "fieldtype": "Int",
+   "label": "Days Employed",
+   "mandatory_depends_on": "eval:doc.workflow_state==\"Hired\""
+  },
+  {
+   "depends_on": "eval:doc.workflow_state==\"Hired\"",
+   "fieldname": "number_of_assigned_projects",
+   "fieldtype": "Int",
+   "label": "Number of Assigned Projects",
+   "mandatory_depends_on": "eval:doc.workflow_state==\"Hired\""
+  },
+  {
+   "fieldname": "interview_info_section",
+   "fieldtype": "Section Break",
+   "label": "Interview Info"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state==\"Interview Scheduled\"",
+   "fieldname": "interview_time",
+   "fieldtype": "Datetime",
+   "label": "Interview Time",
+   "mandatory_depends_on": "eval:doc.workflow_state==\"Interview Scheduled\""
+  },
+  {
+   "depends_on": "eval:doc.workflow_state==\"Interview Scheduled\"",
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes",
+   "mandatory_depends_on": "eval:doc.workflow_state==\"Interview Scheduled\""
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-25 21:11:57.173558",
+ "modified_by": "Administrator",
+ "module": "Employee Management System",
+ "name": "EMS Employee",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

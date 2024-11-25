@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:project_name",
+ "creation": "2024-11-25 01:18:04.760687",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "project_details_section",
+  "project_name",
+  "description",
+  "column_break_tayc",
+  "start_date",
+  "end_date",
+  "company_info_section",
+  "ems_company",
+  "column_break_zsus",
+  "ems_department",
+  "section_break_jdid",
+  "assigned_employees"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_details_section",
+   "fieldtype": "Section Break",
+   "label": "Project Details"
+  },
+  {
+   "fieldname": "column_break_tayc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_info_section",
+   "fieldtype": "Section Break",
+   "label": "Company Info"
+  },
+  {
+   "fieldname": "column_break_zsus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jdid",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "assigned_employees",
+   "fieldtype": "Table",
+   "label": "Assigned Employees",
+   "options": "Project Assigned Employes"
+  },
+  {
+   "fieldname": "ems_department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "EMS Department"
+  },
+  {
+   "fieldname": "ems_company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "EMS Company"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-25 01:32:14.751528",
+ "modified_by": "Administrator",
+ "module": "Employee Management System",
+ "name": "EMS Project",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "project_name"
+}

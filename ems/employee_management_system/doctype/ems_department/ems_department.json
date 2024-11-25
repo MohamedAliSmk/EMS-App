@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:department",
+ "creation": "2024-11-25 00:43:39.230502",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "statistics_section",
+  "number_of_employees",
+  "number_of_projects",
+  "section_break_erdm",
+  "department_name",
+  "ems_company",
+  "company_abbr",
+  "column_break_hrgx",
+  "department"
+ ],
+ "fields": [
+  {
+   "fieldname": "department_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Department name",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department",
+   "read_only": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "fetch_from": "company.abbr",
+   "fieldname": "company_abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Company Abbr",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hrgx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ems_company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "EMS Company",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "number_of_employees",
+   "fieldtype": "Int",
+   "label": "Number of Employees",
+   "read_only": 1
+  },
+  {
+   "fieldname": "number_of_projects",
+   "fieldtype": "Int",
+   "label": "Number of Projects",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_erdm",
+   "fieldtype": "Section Break",
+   "label": "Department Details"
+  },
+  {
+   "fieldname": "statistics_section",
+   "fieldtype": "Section Break",
+   "label": "Statistics"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-25 07:18:55.714957",
+ "modified_by": "Administrator",
+ "module": "Employee Management System",
+ "name": "EMS Department",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
