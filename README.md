@@ -87,16 +87,16 @@ Replace site-name with the name of your site.
 ## API Documentation
 Check the postman_collection.json file for all the available API endpoints.
 
-Create Employee
-Description: Creates a new employee record.
-Method: `POST`
-Endpoint: `{{base_url}}/api/resource/EMS Employee`
+Create Employee<br>
+Description: Creates a new employee record.<br>
+Method: `POST`<br>
+Endpoint: `{{base_url}}/api/resource/EMS Employee`<br>
 
-Authorization:
-Key: `Authorization`
-Value: `token {{api_token}}:{{api_secret}}`
-Request Body:
-Content-Type: application/json
+Authorization:<br>
+Key: `Authorization`<br>
+Value: `token {{api_token}}:{{api_secret}}`<br>
+Request Body:<br>
+Content-Type: application/json<br>
 ```json
 {
     "employee_name": "Mohamed Ali",
@@ -107,9 +107,9 @@ Content-Type: application/json
     "ems_department": "Development - AAP"
 }
 ```
-Expected Response:
-Status: 201 Created
-Response Body:
+Expected Response:<br>
+Status: 201 Created<br>
+Response Body:<br>
 ```json
 {
     "data": {
@@ -133,5 +133,5 @@ Response Body:
     }
 }
 ```
-Thanks
+Thanks<br>
 Mohamed Ali
