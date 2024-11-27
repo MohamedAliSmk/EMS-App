@@ -1,0 +1,113 @@
+1. Create Employee
+    Description: Creates a new employee record.
+    Method: POST
+    Endpoint: {{base_url}}/api/resource/EMS Employee
+    Authorization: API key
+        Key: Authorization
+        Value: token {{api_token}}:{{api_secret}}
+   Request Body:
+        Content-Type: application/json
+        {
+            "employee_name": "Mohamed Ali",
+            "email_address": "mohamedali@gmail.com",
+            "address": "123cairo",
+            "designation": "software engineer",
+            "ems_company": "Apple",
+            "ems_department": "Development - AAP"
+        }
+    Expected Response:
+        Status: 201 Created
+        Response Body:
+        {
+            "data": {
+                "name": "Mohamed Ali",
+                "owner": "Administrator",
+                "creation": "2024-11-27 20:08:06.441083",
+                "modified": "2024-11-27 20:08:06.441083",
+                "modified_by": "Administrator",
+                "docstatus": 0,
+                "idx": 0,
+                "workflow_state": "Application Received",
+                "employee_name": "Mohamed Ali",
+                "email_address": "mohamedali@gmail.com",
+                "address": "123cairo",
+                "designation": "software enginner",
+                "ems_company": "Apple",
+                "ems_department": "Development - AAP",
+                "number_of_assigned_projects": 0,
+                "days_employed": 0,
+                "doctype": "EMS Employee"
+            }
+        }
+2. Get Employee Details
+    Description: Retrieves details of a specific employee.
+    Method: GET
+    Endpoint: {{base_url}}/api/resource/EMS Employee/Mohamed Ali
+
+    Expected Response:
+    Status: 200 OK
+    Response Body:
+    {
+        "data": {
+            "name": "Mohamed Ali",
+            "owner": "Administrator",
+            "creation": "2024-11-27 20:08:06.441083",
+            "modified": "2024-11-27 20:08:06.441083",
+            "modified_by": "Administrator",
+            "docstatus": 0,
+            "idx": 0,
+            "workflow_state": "Application Received",
+            "employee_name": "Mohamed Ali",
+            "email_address": "mohamedali@gmail.com",
+            "address": "123cairo",
+            "designation": "software enginner",
+            "ems_company": "Apple",
+            "ems_department": "Development - AAP",
+            "number_of_assigned_projects": 0,
+            "days_employed": 0,
+            "doctype": "EMS Employee"
+        }
+    }
+3. Update Employee
+    Description: Updates an existing employee's details.
+    Method: PUT
+    Endpoint: {{base_url}}/api/resource/EMS Employee/Mohamed Ali
+    Authorization: API key
+    Key: Authorization
+    Value: token {{api_token}}:{{api_secret}}
+    Request Body:
+    Content-Type: application/json
+    {
+        "address": "123 new cairo",
+        "designation": "Backend developer"
+    }
+    Expected Response:
+    Status: 200 OK
+    Response Body:
+    {
+        "data": {
+            "employee_name": "Mohamed Ali",
+            "email_address": "mohamedali@gmail.com",
+            "address": "123 new cairo",
+            "designation": "Backend developer",
+            "ems_company": "Apple",
+            "ems_department": "Development - AAP"
+        }
+    }
+4. Delete Employee
+    Description: Deletes a specific employee record.
+    Method: DELETE
+    Endpoint: {{base_url}}/api/resource/EMS Employee/Mohamed Ali
+    Authorization: API key
+    Key: Authorization
+    Value: token {{api_token}}:{{api_secret}}
+    Expected Response:
+    Status: 204 No Content
+    Response Body: None.
+    Authentication
+    All endpoints require API key-based authentication.
+    Header Example:
+Variables
+Replace {{base_url}} with the appropriate API base URL for your environment.
+Replace {{api_token}} with the api token from your user.
+Replace {{api_secret}} with the api secret from your user.
