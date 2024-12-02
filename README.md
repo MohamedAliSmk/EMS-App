@@ -43,20 +43,7 @@ git clone https://github.com/frappe/frappe_docker.git
 cd frappe_docker
 ```
 
-### Step 2: Edit docker-compose.override.yml
-Add your custom app to the docker-compose.override.yml file. Below is an example configuration to include your app:
-
-```docker
-version: "3.7"
-services:
-backend:
-volumes:
-- ./apps:/workspace/development/apps
-```
-
-Ensure you replace ./apps with the correct path to your custom app if necessary.
-
-### Step 3: Run the Docker Setup
+### Step 2: Run the Docker Setup
 Build and start the Docker containers:
 ```bash
 docker compose -f pwd.yml up -d
@@ -66,7 +53,7 @@ Wait for 5 minutes for ERPNext site to be created or check create-site container
 
 If you ran in a Dev Docker environment, to view container logs: docker compose -f pwd.yml logs -f create-site. Don't worry about some of the initial error messages, some services take a while to become ready, and then they go away.
 
-### Step 4: Install the Custom App on Your Site
+### Step 3: Install the Custom App on Your Site
 Once the containers are running, follow these steps to install your custom app:
 
 Access the backend container:
