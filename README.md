@@ -59,7 +59,7 @@ Ensure you replace ./apps with the correct path to your custom app if necessary.
 ### Step 3: Run the Docker Setup
 Build and start the Docker containers:
 ```bash
-docker-compose up -d
+docker compose -f pwd.yml up -d
 ```
 
 Wait for 5 minutes for ERPNext site to be created or check create-site container logs before opening browser on port 8080. (username: Administrator, password: admin)
