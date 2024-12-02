@@ -61,6 +61,10 @@ Access the backend container:
 docker exec -it frappe_docker-backend-1 /bin/bash
 ```
 
+Set Developer mode
+```bash
+bench set-config -g developer_mode 1
+```
 Get your custom app from the repository:
 ```bash
 bench get-app ems https://github.com/MohamedAliSmk/EMS-App.git
